@@ -1,0 +1,17 @@
+touch .gitignore
+git config --global user.name Sidra
+git config --global user.email sidra182001@gmail.com
+git init
+git add .
+git commit -m "Initial Commit"
+Git Status
+ssh-keygen -t rsa -b 4096 -C "sidra182001@gmail.com"
+tail<path to id_rsa.pub> #Add this key to yoyr Github Account
+git remote add origin <ssh url.git>
+git push origin master
+
+
+For update anything:
+git status
+git add .
+git push origin master
