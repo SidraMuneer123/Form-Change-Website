@@ -26,16 +26,21 @@ export default function Navbar(props) {
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
         <button className="btn btn-outline-success" type="submit">Search</button>
       </form> */}
-      <div class={`form-check form-switch text-${props.mode==='light'?'dark':'light'}`}>
-  <input class="form-check-input"onClick={props.toggleme} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-  <label class="form-check-label" for="flexSwitchCheckDefault">Enable Dark Mode</label>
-</div>
-      <div classname={`form-check form-switch text`}>
-  <input className="form-check-input"onClick={props.toggleme} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-  <label className="form-check-label" for="flexSwitchCheckDefault">Enable Dark Mode</label>
-</div>
-    </div>
+      <div className="d-flex">
+        <div className="bg-primary rounded mx-2" onClick={()=>{props.toggleme('primary')}} style={{height:'30px',width:'30px ',cursor:'pointer'}}></div>
+        <div className="bg-danger rounded mx-2" onClick={()=>{props.toggleme('danger')}} style={{height:'30px',width:'30px ',cursor:'pointer'}}></div>
+        <div className="bg-success rounded mx-2" onClick={()=>{props.toggleme('success')}} style={{height:'30px',width:'30px ',cursor:'pointer'}}></div>
+        <div className="bg-warning rounded mx-2" onClick={()=>{props.toggleme('warning')}} style={{height:'30px',width:'30px ',cursor:'pointer'}}></div>
+        <div className="bg-light rounded mx-2" onClick={()=>{props.toggleme('light')}} style={{height:'30px',width:'30px ',cursor:'pointer',border:'1px solid black'}}></div>
+        <div className="bg-dark rounded mx-2" onClick={()=>{props.toggleme('dark')}} style={{height:'30px',width:'30px ',cursor:'pointer'}}></div>
+      </div>
+      {/* <div class={`form-check form-switch text-${props.mode==='light'?'dark':'light'}`}>
+  <input class="form-check-input"onClick={()=>{props.toggleme('null')}} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+  <label class="form-check-label" for="flexSwitchCheckDefault">Toggle Mode</label>
+</div> */}
+    
   </div>
+    </div>
 </nav>
 
 )

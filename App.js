@@ -1,9 +1,8 @@
-// import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import React, {useState} from 'react'
-import Alert from './components/Alert';
+// import Alert from './components/Alert';
 // import About from './components/About';
 // let name="Harry";
 
@@ -20,11 +19,22 @@ function App() {
       setAlert(null);
       
     }, 1500);
-
-
+    
+    
   }
-  const toggleme = () =>{
+  const removeBodyClasses=()=>{
+    // document.body.classList.remove('bg-primary')
+    document.body.classList.remove('bg-light')
+    document.body.classList.remove('bg-dark')
+    document.body.classList.remove('bg-success')
+    document.body.classList.remove('bg-danger')
+    document.body.classList.remove('bg-warning')
+  }
+  const toggleme = (cls) =>{
+    removeBodyClasses();
     if(mode==='light'){
+
+      document.body.classList.add('bg-'+cls)
       setMode('dark')
       document.body.style.background = '#042743';
       showalert("You Enable the Dark Mode" , "success")
@@ -39,7 +49,7 @@ function App() {
     <>
     
 <Navbar title = "My React App" about = "About" mode = {mode} toggleme = {toggleme}></Navbar>
-  <Alert alert = {alert}></Alert>
+  {/* <Alert alert = {alert}></Alert> */}
 {/* <Alert></Alert> */}
 <div className="container my-3">
   <div className="container my-8">

@@ -43,3 +43,18 @@
   /* border: 2px solid black; */
   margin-top: 40px;
 }
+.mx-auto{
+  position: relative;
+  top: 120px;
+  border: 1px solid gainsboro;
+  padding: 30px 30px;
+}
+.form-check{
+  /* border: 2px solid darkblue; */
+  /* width: 300px; */
+  /* position: relative; */
+  text-align: right;
+
+  
+
+}
