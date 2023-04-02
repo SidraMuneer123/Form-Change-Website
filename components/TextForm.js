@@ -9,6 +9,7 @@ export default function TextForm
     let newText = text.toUpperCase();
     setText(newText);
     props.alerti("you capatallize the content","success")
+    document.title = "TextUtils-Converted in UpperCase"
     
   }
   const lowerMe = ()=>{
@@ -17,6 +18,7 @@ export default function TextForm
     let newText = text.toLowerCase();
     setText(newText);
     props.alerti("convert to lower case","success")
+    document.title = "TextUtils-Converted in LowerCase"
 
     
   }
